@@ -1,15 +1,9 @@
 ﻿using Renci.SshNet;
-using System;
-using System.Collections.Generic;
 using System.Diagnostics;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace D365SFTP
 {
-    public  class SFTPClient
+    public class SFTPClient
     {
         public static string T24_path = System.Configuration.ConfigurationManager.AppSettings["path"];
         public static string host = System.Configuration.ConfigurationManager.AppSettings["host"];
@@ -29,7 +23,7 @@ namespace D365SFTP
 
             DateTime dt = DateTime.Now;
             string mon = String.Concat("0", dt.Month);
-            string file = ""+dt.Year+""+mon.Substring(mon.Length-2,2) + "" + dt.Day+ ".csv";
+            string file = "" + dt.Year + "" + mon.Substring(mon.Length - 2, 2) + "" + dt.Day + ".csv";
 
             // path for file you want to upload
             var uploadFile = @"C:\\Users\\mmkaranja\\Downloads\\AJUA.pdf";
